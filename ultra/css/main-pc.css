@@ -1,0 +1,188 @@
+@charset "UTF-8";
+/* reset, common */
+*{margin: 0; padding: 0;
+  letter-spacing: -1.5px;
+  /* background: #000128; */
+}
+li{list-style: none;}
+a{text-decoration: none;}
+button{border:0; background: none; outline: none;}
+body{
+  font-family: 'Archivo Black', sans-serif; letter-spacing: -0.95px;
+  text-transform: uppercase; background: #000128;
+}
+article{padding:45px 0;}
+.skip{font-size: 0; text-indent: -9999px; position: absolute; left:-9999px;}
+.center{text-align: center; width: 1040px; margin: auto; position: relative; overflow: hidden;}
+.title h2{color: #fff8e2; font-size: 50px; padding-top: 90px; text-shadow: 0 0 15px #000128;
+}
+/* header */
+header{
+  position: fixed; z-index: 50;
+  width: 100%; height: 195px; box-sizing: border-box;
+  background: #000128; border-bottom: 1px solid #fff8e2;
+}
+/* 로고 */
+header .ultra-logo{}
+header .ultra-logo img{margin: 22px 0 20px; width: 180px;}
+/* 네비게이션 */
+header .main-nav{width: 1040px; margin: 0 auto; overflow: hidden;}
+header .main-nav>li{float: left; width: 20%;}
+header .main-nav>li>a{font-size: 20px; margin-bottom: 5px; color: #fff8e2; border-bottom: 2px solid transparent;}
+header .main-nav>li>a:hover{border-bottom: 2px solid #fff8e2;}
+header .main-nav>li>a i{margin-left: 10px;}
+header .sub-nav{margin: 5px auto; width: 160px; height: 0; overflow: hidden; transition: 0.5s;}
+header .main-nav>li:hover .sub-nav{background: rgba(255, 248, 226, 0.7); height: 170px;}
+header .sub-nav>li{margin: 6px 0 10px;}
+header .sub-nav>li>a{font-size: 14px; color: #000128;}
+
+/* section */
+section{
+  padding: 90px 0;
+  background-color: #000128;
+  background-image: url(../images/bg.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.lineups .title{}
+
+/* 스와이프 덮어쓰기 */
+.lineups .swiper-wrap{position: relative;}
+.lineups .swiper-container-3d{perspective: 600px;}
+.lineups .swiper-container p{
+  padding-top: 15px; font-size: 26px;
+  text-transform: uppercase; color: #000128;
+  text-shadow: 0px 0px 10px #fff8e2;
+}
+.lineups .swiper-container{padding-top: 35px; width: 960px; margin: auto;}
+/* 스와이프 좌우 버튼 스와이프 밖으로 빼는 방법 질문1 */
+.lineups .swiper-button-next,
+.lineups .swiper-button-prev{
+  background-image: none; margin-top: 50px; margin-left: -10px;
+}
+.lineups i{color: #fff8e2;}
+
+/* 아티스트 로고 */
+.swiper-container .swiper-wrapper .bgblack{background: rgba(0, 0, 0, 0.4);}
+.swiper-container .swiper-wrapper .bgblack img{width: 100%; opacity: 0; transition: 0.5s;}
+.swiper-container .swiper-wrapper .bgblack:hover img{opacity: 1;}
+
+/* 월드와이드 */
+
+/* 월드와이드 좌우버튼 */
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next,
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev{background: none;}
+.swiper-button-next, .swiper-button-prev{
+  width: 20px; height: 50px; line-height: 50px;
+  font-size: 3em; color: #fff8e2;
+}
+
+/* 월드와이드 페이지네이션 */
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+  width: auto; bottom: -25px; left:50%; transform: translateX(-50%);
+}
+.swiper-pagination-bullet{width: 15px; height: 15px; border: 2px solid #fff8e2;  box-sizing: border-box; background: none; opacity: 1;}
+.swiper-pagination-bullet-active{background: #fff8e2;}
+
+/* 공지사항/ 이메일등록 공통사항 */
+.allbox{width: 960px; padding: 0;}
+.container{
+border: 4px solid #fff8e2; box-sizing: border-box;
+width: 460px; height: 340px; background: #000128;
+}
+/* 공지사항 */
+.allbox .left{float: left; display: inline-block; width: 460px;}
+.allbox .left .news-press{width: 100%; text-align: left;}
+.allbox .left .news-press h2{}
+.allbox .left .news-press h2 a{margin-left: 40px; color: #fff8e2;}
+.allbox .left .news-press h2>i.icon-plus{margin-left: 55px;}/* 아이콘 위치를 못마추겠음.ㅠㅠ*/
+
+.allbox .left .news-box{}
+.allbox .left .news-box .press{text-align: left;}
+.allbox .left .news-box .press ul{}
+.allbox .left .news-box .press ul li{margin: 10px 0 23px 10px;}
+.allbox .left .news-box .press ul li a{color: #fff8e2; font-size: 24px; border-bottom: 2px solid #fff8e2;}
+.allbox .left .news-box .press ul li a:before{content: '·'; padding-right: 5px; }
+
+/*이메일등록 */
+.allbox .right{display: inline-block; float: right; color: #fff8e2; width: 460px; margin-right: 0; padding-right: 0;}
+.allbox .right .email-letter{width: 100%; text-align: left;}
+.allbox .right .email-letter h2{}
+.allbox .right .email-letter h2>i.icon-check{}
+
+.allbox .right .email-box{}
+.allbox .right .email-box .input-box{font-family: 'Nanum Barun Gothic', sans-serif; font-weight: 700; text-align: left; width: 353px; height: 210px; padding: 50px 50px;}
+.allbox .right .email-box .input-box h3{font-size: 43px; font-weight: normal; letter-spacing: -5.95px;}
+.allbox .right .email-box .input-box label{}
+.allbox .right .email-box .input-box .wrap{position: relative; width: 350px; height: 50px; border: 1px solid #fff8e2; box-sizing: border-box; margin:20px 0;}
+.allbox .right .email-box .input-box .wrap input{
+  border: 0;
+  position: absolute; top: 50%; left: 4px; transform: translateY(-50%);
+  width: 300px; height: 40px; background: #fff8e2;
+  color: #000128;
+  font-size: 18px; font-family: 'Archivo Black', sans-serif;
+  letter-spacing: -0.95px; text-indent: 10px;
+}
+.center .right .email-box .input-box .wrap button{
+  cursor: pointer; font-size: 2em; color: #fff8e2;
+  width: 45px; height: 50px; position: absolute;
+  right: 0; top: 50%; transform: translateY(-50%);
+}
+
+.center .right .email-box .input-box ul{display: block; margin-top: 20px; height: auto;}
+.center .right .email-box .input-box ul li::before{content: '·';margin-right: 5px; font-size: 16px;}
+.center .right .wrap input::-webkit-input-placeholder {color: #000128;}
+
+footer{background: #000128; border-top: 1px solid #fff8e2; color: #fff8e2; height: 200px; box-sizing: border-box;}
+footer .center{}
+footer .center .info{margin-top: 40px;}
+footer .center .info ul{display: inline-block; overflow: hidden;}
+footer .center .info ul li{float: left; padding: 0 10px; text-decoration: underline;}
+footer .center .info ul li a{color: #fff8e2;}
+
+footer .center .sns{margin-top: 20px;}
+footer .center .sns ul{display: inline-block; overflow: hidden;}
+footer .center .sns ul li{float: left; margin: 0 10px;}
+footer .center .sns ul li a{color: #fff8e2;}
+footer .center .sns li .icon{font-size: 26px;}
+footer strong{display: inline-block; margin-top: 20px;}
+
+#popup-bg{
+  display: none;
+  transition: 0.5s;
+  position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 80; background: rgba(0,0,0,0.5)}/* 풀사이즈와 백그라운드 값 주는 방법 픽스도~*/
+#popup{
+  display: none;
+  background: #000128; width: 440px; height: 220px;
+  position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 100;
+}
+#popup .box{width: 100%; height: 100%; text-align: center; margin: 0 auto;}
+#popup span{
+  display: inline-block; width: 370px; font-size: 24px;  color: #fff8e2;
+  margin: 15px 15px 20px; border-bottom: 2px solid #fff8e2; padding:20px;
+}
+#popup button{
+  position: absolute; top: 167px; left: 345px; width: 80px; height: 35px;
+  font-size: 16px; font-weight: bold; border: none; background: #fff8e2; cursor: pointer;
+}
+
+
+@media (max-width: 767px) {
+  .ultra-logo img{border: 2px solid #fff;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/

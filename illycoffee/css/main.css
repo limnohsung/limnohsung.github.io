@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+/* reset, common */
+a {color: #2b0f0e;}
+a:focus, a:hover, a:active {color: #ffffff;}
+.bg-primary{background: #d9965a !important;}
+.text-secondary{color: #d9965b !important;}
+.btn-primary {background-color: #d9965a;border-color: #d9965a;}
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle,
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active{background-color: #2b0f0e; border-color: #2b0f0e;}
+hr.star-light:after{background-color: #d9965a;}
+hr.star-dark {border-color: #d9965a;}
+hr.star-dark:after {color: #d9965a;}
+
+/* main ================================================== */
+header.slide .filter{
+  background: url('../img/Illy-Ice-Slider.jpg') ;
+  background-position: center bottom;
+  background-position: bottom center;
+  filter: blur(5px);
+}
+
+/* product */
+.portfolio{text-align: center;}
+.portfolio .portfolio-item .portfolio-item-caption{background-color: rgba(43, 14, 13, 0.5);}
+
+/* about */
+#about p {font-size: 1.1rem; line-height: 30px; text-align: center;}
+.btn-more i{padding-left: 10px;}
+
+/* 팝업 X 색상 */
+.portfolio-modal .portfolio-modal-dialog .close-button {color: #d9965a;}
+/* send 중앙정렬 */
+form > .form-group{text-align: center;}
+
+/* footer */
+.list-inline-item .fab{line-height: 35px;}
+.footer{background-color: #d9965b;}
+.copyright{background-color: #2b0f0e;}
+
+/* top 버튼 아이콘 중앙정렬 */
+.scroll-to-top .fa{line-height: 55px;}
+
+/* 팝업 닫기 */
+.portfolio-modal .portfolio-modal-dialog .close-button:hover,
+.portfolio-modal .portfolio-modal-dialog .close-button:focus,
+.portfolio-modal .portfolio-modal-dialog .close-button:active{color:#2b0f0e;}
+
+@media (max-width: 767px){
+  nav img{width: 50px;}
+  #mainNav{background: #2b0f0e;}
+  #mainNav .navbar-nav li.nav-item a.nav-link.active{color:#d9965a;}
+  header.masthead{padding-top: 92px;}
+}
+
+@media (min-width: 768px){
+  nav{transition: all .3s; background: none;}
+  nav img{width: 120px; transition: all 0.3s; }
+  #mainNav{transition: padding-top 0.3s, padding-bottom 0.3s, background 0.3s;}
+  #mainNav .navbar-nav li.nav-item a.nav-link{color:#2b0f0e;}
+
+  .navbar-shrink{background: #2b0f0e;}
+  .navbar-shrink img{width: 80px;}
+  #mainNav.navbar-shrink .navbar-nav li.nav-item a.nav-link{color:#fff;}
+  #mainNav .navbar-nav li.nav-item a.nav-link:hover{color:#d9965b;}
+  #mainNav .navbar-nav>li.nav-item>a.nav-link.active{background: #d9965a;}
+  #mainNav .navbar-nav>li.nav-item>a.nav-link.active:active,
+  #mainNav .navbar-nav>li.nav-item>a.nav-link.active:focus,
+  #mainNav .navbar-nav>li.nav-item>a.nav-link.active:hover{background: #d9965a;}
+  #about p {max-width: 810px; margin: auto; margin-bottom: 50px;}
+}
+
+/* 지도 */
+#map{position: relative; overflow: hidden;}
+#map .store{text-align: center; width: 100%; height: 800px;}
+#map .store .bg{
+  position: absolute; left: 0; top: 0; z-index: 1;
+  width: 100%; height: 100%; background: rgba(0,0,0,0.8);
+}
+#map img{
+  position: absolute;
+  top:0; left: 0;
+  width: 100%;
+  background-attachment: scroll;
+}
+#map #map-canvas{
+  position: absolute; z-index: 2;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 100%; height: 440px; width: 100%; margin: auto;
+}

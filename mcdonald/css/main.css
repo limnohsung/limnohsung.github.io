@@ -1,0 +1,173 @@
+@charset "UTF-8";
+body{
+  font-family: 'Jua', sans-serif;
+  color: #000;
+  background: #f5fdff;
+  letter-spacing: -0.95px;
+}
+button{background: none; border: none; outline: 0;}
+.skip{font-size: 0; text-indent: -9999px; position: absolute; left: -9999px;}
+
+.feature .flexslider button{position: absolute; top:50%; transform: translateY(-50%); z-index: 1; font-size: 2em; color: #fff;}
+.feature .flexslider button.left{left: -20px;}
+.feature .flexslider button.right{right: -20px;}
+.feature .flexslider :hover button.left{left: 10px;}
+.feature .flexslider :hover button.right{right: 10px;}
+
+/* 스와이프 */
+.swiper{
+  clear: both;
+  padding: 10px;
+}
+.swiper-container {
+  width: 100%;
+  height: 360px;
+}
+.swiper-wrapper{
+  height: 320px;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+}
+.swiper .swiper-slide img{height: 80%; width: auto;}
+.swiper .swiper-slide span{
+  display: inline-block; margin:0;
+  border: 2px solid #fec329; background: #fec329; padding: 15px;
+  box-sizing: border-box; text-align: center; color:#000;
+}
+.swiper-container .swiper-wrapper .swiper-slide{background: #f5f5f5; text-align: center;}
+.swiper-pagination{bottom:0 !important;}
+
+/* 스와이프 페이지네이션 */
+.swiper-pagination-bullet{width: 12px; height: 12px; border: 2px solid #cf240a; box-sizing: border-box; opacity: 1;}
+.swiper-pagination-bullet-active{background: #fec329;}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{margin: 0 3px;}
+/* 스와이프 아이콘 */
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next,
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev{display: none;}
+/* /스와이프 */
+
+/* 로고정의 */
+.container .omega h1{width: 100%; height: 100px; margin: 0 auto; text-align: center;}
+.container .omega h1 img{width:100px;}
+
+/* 네비바 정의 */
+.main-nav{margin-top: 15px; border-top: 2px solid #fec329; border-bottom: 2px solid #fec329;}
+.main-nav a:link{color : #000;}
+.main-nav a:visited{color: #000;}
+.main-nav .alpha li a:hover{color: #cf240a; border-bottom: 2px solid #cf240a;}
+.flex-direction-nav a{}
+.flex-control-nav li{margin: 0 3px;}
+.flex-control-paging li a.flex-active{
+  background: #fec329; width: 12px; height: 12px;
+  border-radius: 50%; border: 2px solid #cf240a;
+  box-shadow: none; box-sizing: border-box;
+}
+.flex-control-paging li a {
+  width: 12px; height: 12px;
+  background: #000; border: 2px solid #cf240a; box-shadow: none;
+  box-sizing: border-box; border-radius: 50%;
+}
+
+.flex-control-nav{
+  width: auto; border: 18px; left:50%;
+  transform:translateX(-50%);
+}
+
+.container .column, .container .columns{
+  /* float: initial; */
+}
+.container .six.columns{width: auto; float: right;}
+}
+
+.container .six.columnss{width: auto;}
+.columns .social a{float: left;}
+
+.social a:nth-child(1){
+  background-image: url(../img/facebook.png);
+}
+.social a:nth-of-type(2){
+  background-image: url(../img/instagram.png);
+}
+.social a:nth-of-type(3){
+  background-image: url(../img/youtube.png);
+}
+.social a:nth-of-type(4){
+  background-image: url(../img/kakaostory.png);
+}
+
+.h-border{border-top: 1px solid #fec329; border-bottom: 1px solid #fec329;}
+
+
+
+.row, .clearfix{text-align: center;}
+.thumbnail .details{background: #f0592c; color: #f5fdff;}
+.thumbnail a:hover .details{width: 100%; box-sizing: border-box;}
+
+/* 맥이벤트 */
+.latest-work img{box-shadow: none;}
+
+/* 맥드라이브 */
+.imgbox{
+  background-image: url(../img/mc-drive-2.jpg);
+  background-size: cover; padding-bottom: 100px;
+  position: relative; margin: 0 10px; clear: both; color: #fff;}
+.imgbox .bgblack{
+  position: absolute; top:0;
+  width: 100%; height: 100%; background: rgba(0, 0, 0,0.7);}
+.imgbox span{
+  position: relative;
+  display: block;
+  padding: 68px 0;
+  width: 490px;
+  margin: 0 auto;
+}
+
+/* 맥드라이브  */
+.imgbox .drivebox{position: relative; overflow: hidden; background: rgba(207, 36, 10, 0.15); padding: 30px 0;}
+.imgbox .drivebox .drive{width: 50%; float: left;}
+.imgbox .drivebox .drive img{width: 90%;}
+.imgbox .drivebox .textbox{width: 50%; float: left; text-align: left;}
+.imgbox .drivebox .textbox div{float: left; width: 50%; padding: 0 10px 20px 0; box-sizing: border-box;}
+.imgbox .drivebox .textbox div b{font-size: 24px; margin-bottom: 10px; display: inline-block;}
+.imgbox .drivebox .textbox div p{font-size: 15px;}
+
+footer{
+  width: 940px; margin-top: 10px; font-family: 'Nanum Barun Gothic', sans-serif;
+  font-weight: normal; background: #fff; padding: 20px 0; color: #212121;
+  opacity: 1; text-align: center; border-top: 1px solid #fec329;
+}
+footer li{margin: 0 10px;}
+footer .alpha ul{display: inline-block; width: 100%; margin: 20px 0 20px;}
+footer .alpha ul a{font-size: 19px; color: #212121; font-weight: bold;}
+footer .about{text-align: center; font-size: 14px;}
+footer .about p{text-align: center; padding: 10px 0px;}
+
+@media (max-width:767px) {
+
+  .imgbox span{width: 80%;}
+  .imgbox .drivebox .drive{width: 100%; padding-bottom: 30px;}
+  .imgbox .drivebox .textbox{width: 100%;}
+  .imgbox .drivebox .textbox div{padding: 10px; width: 100%; text-align: center;}
+  .imgbox .drivebox .textbox div b{font-weight: normal;}
+
+  .focused-text{font-size: 1em;}
+  .container footer.columns, .container footer.column{margin-top: 10px; padding: 0 10px; box-sizing: border-box;}
+  footer .alpha ul a{font-size: 14px;}
+  footer .about p, footer .about{font-size: 11px;line-height: 16px;}
+  footer li{margin: 0 5px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+/**/

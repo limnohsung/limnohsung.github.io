@@ -1,0 +1,281 @@
+@charset "UTF-8";
+@font-face{
+ font-family:'BareunDotum';
+ font-style:normal;
+ font-weight:400;
+ src:url('https://cdn.jsdelivr.net/korean-webfonts/1/orgs/othrs/kpa/BareunDotum/BareunDotumOTFPro2.woff2') format('woff2'),
+     url('https://cdn.jsdelivr.net/korean-webfonts/1/orgs/othrs/kpa/BareunDotum/BareunDotumOTFPro2.woff') format('woff');
+}
+@font-face{
+ font-family:'BareunDotum';
+ font-style:normal;
+ font-weight:700;
+ src:url('https://cdn.jsdelivr.net/korean-webfonts/1/orgs/othrs/kpa/BareunDotum/BareunDotumOTFPro3.woff2') format('woff2'),
+     url('https://cdn.jsdelivr.net/korean-webfonts/1/orgs/othrs/kpa/BareunDotum/BareunDotumOTFPro3.woff') format('woff');
+}
+@font-face{
+ font-family:'BareunDotum';
+ font-style:normal;
+ font-weight:300;
+ src:url('https://cdn.jsdelivr.net/korean-webfonts/1/orgs/othrs/kpa/BareunDotum/BareunDotumOTFPro1.woff2') format('woff2'),
+     url('https://cdn.jsdelivr.net/korean-webfonts/1/orgs/othrs/kpa/BareunDotum/BareunDotumOTFPro1.woff') format('woff');
+}
+
+/* reset */
+*{margin: 0; padding: 0; letter-spacing: -1.95px;}
+body{font-family: 'BareunDotum';}
+li{list-style: none;}
+a{text-decoration: none;}
+button{border:0; background: none; outline: none;}
+.skip{font-size: 0; text-indent: -9999px; position: absolute; left:-9999px;}
+
+/* header =================================================== */
+#intropage{background: #202020; height: 100vh;}
+#intropage .myname{
+  position: absolute; background: #202020; width: 1530px; height: 440px; text-align: center;
+  background: #f39f16; top: 50%; left:50%; transform: translate(-50%, -50%) skewX(-9deg);
+}
+#intropage .myname h1{
+  position: absolute; top: 50%; transform: translateY(-50%) skewX(9deg); font-weight: 900;
+  width: 100%; color: #202020; font-size: 120px; line-height: 125px; letter-spacing: -5px;
+}
+#intropage .line ul{}
+#intropage .line ul li{height: 10px; width: 390px; background: #f39f16; margin: 10px 0;}
+#intropage .line .left-line{position: absolute; left: 0; top: 30%;}
+#intropage .line .right-line{position: absolute; right: 0; bottom: 30%;}
+#intropage button{position: absolute; left:50%; bottom: 50px; color: #f39f16; font-size: 3em;}
+.bounce {
+  -webkit-animation: bounce 1s infinite;
+}
+@-webkit-keyframes bounce {
+  0%, 100%{transform: scale(1,1) translate(-50%, 5px);}
+  50%{transform: scale(1,1.1) translate(-50%, -25px);}
+}
+
+/* section 기본 인적 사항============================= */
+section{background: #f39f16; position: relative;}
+.nav-top{position: absolute; width: 100%; height: 130px; top:0; left:0; z-index: 1; transition: 0.5s;background: #f39f16;
+border-bottom: 1px solid #202020; box-shadow: 0 0 10px rgba(2, 2, 2, 0.5);}
+.nav-top.fixed{position: fixed;background: #f39f16;}
+article{height: 100vh; position: relative;}
+/* section .nav-top::after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100px;
+  background: #f39f15;
+  transform: skewY(-2deg) translateY(70px);
+} */
+.nav-top .nav-bar{position: absolute; top: 70px; right: 240px; display: inline-block;z-index: 1;}
+.nav-top .nav-bar li{font-weight: 600; float: left; font-size: 40px; padding: 0 0 0 6px; margin-left: 15px;}
+.nav-top .nav-bar li a{color: #202020; border-bottom: 2px solid transparent; transition: 0.5s;}
+.nav-top .nav-bar li a.active{color: #fff; border-bottom: 2px solid #fff;}
+
+#profile{}
+#profile .white{position: absolute; top: 50%; width: 100%; background: #fff; padding: 70px 0; transform: translateY(-50%) skewY(-1.7deg);}
+#profile .white .black{}
+#profile .white .black .size{width: 100%; height: 20px; background: #202020;}
+#profile .white .black .black-top{}
+#profile .white .black .black-middle{width: 100%; height: 310px; background: #202020; margin: 10px 0;}
+#profile .white .black .black-bottom{}
+#profile .me{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 1000px; font-weight: bold;}
+#profile .me .pic{float: left; border: 2px solid #f39f16; box-sizing: border-box; width: 475px; height: 475px; overflow: hidden; display: inline-block; margin-right: 50px;}
+#profile .me .pic img{width: 475px; float: left;}
+#profile .me dl{display: inline-block; margin-top: 130px; text-align: left; color: #fff;}
+#profile .me dl dt{font-size: 38px; margin-bottom: 15px; letter-spacing: 1px;}
+#profile .me dl dd{font-size: 20px; word-spacing: 30px; letter-spacing: 1px;}
+#profile .me dl dt .basic-font{font-family: sans-serif;}
+
+#resume{background: #202020; color: #fff; text-align: left;}
+#resume .grid{width: 1405px; height: 100vh; margin: 0 auto;}
+#resume h2{
+  font-size: 80px; font-weight: 900;
+  color: #fff;
+  padding: 140px 0 20px 0;
+}
+#resume .grid-col{width: 33.33%; float: left;}
+#resume h3{color: #f39f16; font-size: 40px; margin-left: -15px; text-align: left;}/*공통사항*/
+#resume h3::before{content: 'ㆍ'; color: #fff;}
+#resume ul{text-align: left;}
+
+#resume .edu-work{}
+#resume .edu-work .education{}
+#resume .edu-work .education h3{}
+#resume .edu-work .education ul li{margin: 5px 0 10px 25px; line-height: 30px;}
+#resume .edu-work .education ul li :nth-child(1){display: block; font-size: 20px;}
+#resume .edu-work .education ul li :nth-child(2){margin-left: 10px; font-size: 18px;}
+
+#resume .workexperience{margin-top: 30px;}
+#resume .workexperience h3{}
+#resume .workexperience ul{}
+#resume .workexperience ul li{margin: 5px 0 10px 25px; line-height: 30px;}
+#resume .workexperience ul li :nth-child(1){display: block; font-size: 18px;}
+#resume .workexperience ul li :nth-child(2){display: block; margin-left: 10px; font-size: 20px;}
+#resume .workexperience ul li :nth-child(3){font-size: 16px; margin-left: 10px; margin-top: 5px;}/* 위쪽으로 붙이고 싶음 */
+
+#resume .award-license{}
+#resume .award-license .award{}
+#resume .award-license .award h3{}
+#resume .award-license .award ul{}
+#resume .award-license .award ul li{margin: 5px 0 10px 25px; line-height: 30px;}
+#resume .award-license .award ul li :nth-child(1){display: block; font-size: 20px;}
+#resume .award-license .award ul li :nth-child(2){display: block; margin-left: 10px; font-size: 18px;}
+#resume .award-license .award ul li :nth-child(3){font-size: 16px; margin-left: 10px; margin-top: 5px;}/* 위쪽으로 붙이고 싶음 */
+
+#resume .award-license .license{margin-top: 30px;}
+#resume .award-license .license h3{}
+#resume .award-license .license ul{}
+#resume .award-license .license ul li{margin: 5px 0 10px 25px; line-height: 20px; font-size: 20px;}
+
+#resume .skills-interests .skills{}
+#resume .skills-interests .skills h4{padding: 15px 0; font-size: 26px; font-weight: lighter;}
+#resume .skills-interests .skills h4>span{background: #f39f16; padding: 5px 10px; margin: 44px 0 0 5px; font-size: 17px; font-weight: bold; border-radius: 30px; float: right;}
+#resume .skills-interests .skills .commo{width: 400px; height: 30px; position: relative; background: #fff; border-radius: 20px;}
+#resume .skills-interests .skills .commo>span{}
+#resume .skills-interests .skills .white .progress1{width: 90%; height: 90%; position: absolute; top: 50%; left: 2.8px; transform: translateY(-50%); background: #f39f16;}
+#resume .skills-interests .skills .white .progress2{width: 70%; height: 90%; position: absolute; top: 50%; left: 2.8px; transform: translateY(-50%); background: #f39f16;}
+#resume .skills-interests .skills .white .progress3{width: 50%; height: 90%; position: absolute; top: 50%; left: 2.8px; transform: translateY(-50%); background: #f39f16;}
+
+#resume .skills-interests .interests{margin-top: 30px;}
+#resume .skills-interests .interests h3{padding: 5px 0; font-size: 40px; font-weight: bold; margin-top: 5px;}
+#resume .skills-interests .interests .box{position: relative; text-align: center; padding: 25px; height: 210px; border: 2px solid #fff; border-radius: 10px; box-sizing: border-box;}
+#resume .skills-interests .interests .box img{padding:0 15px;}
+#resume .skills-interests .interests .box .box-one{width: 460px; position: absolute; top:30px; left: 50%; transform: translateX(-50%);}
+#resume .skills-interests .interests .box .box-one img{}
+
+#resume .skills-interests .interests .box .box-tow{width: 460px; position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);}
+#resume .skills-interests .interests .box .box-tow img{}
+
+#introduction{height: 100vh;}
+#introduction .intro{height: 220px;}
+#introduction h2{
+  font-size: 80px; padding: 140px 0 20px 0;
+  color: #fff; font-weight: 900;
+}
+#introduction .contents{margin: 0 auto; width: 1405px; text-align: left; color: #202020;}
+#introduction .contents b{font-size: 35px; margin-bottom: 10px; font-weight: 800;}
+#introduction .contents p{font-size: 18px; margin: 10px 0 30px; line-height: 24px;}
+
+/* portfolio */
+#portfolio{background: #202020;}
+#portfolio .grid{width: 1405px; height: 100vh; margin: 0 auto;}
+#portfolio h2{
+  font-size: 80px; padding: 140px 0 20px 0;
+  color: #f39f16; font-weight: 900; text-align: left;
+}
+#portfolio .work{width: 100%;}
+#portfolio .work ul{width: 100%;}
+#portfolio .work ul li{
+  position: relative; width: 100%; height: 150px; padding: 10px; margin-bottom: 15px; box-sizing: border-box; overflow: hidden;
+  transition: 0.5s; filter: blur(2px);
+}
+#portfolio .work ul li:hover{animation: color 0.5s infinite alternate; filter: blur(0px);}
+#portfolio .work ul li::before{
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+#portfolio .work ul li:nth-child(1){
+  background-image: url(../img/illycoffee.jpg); background-position: center -290px;
+  background-size: cover; background-repeat: no-repeat;
+}
+#portfolio .work ul li:nth-child(2){
+  background-image: url(../img/mcdonald.jpg); background-position: center top;
+  background-size: cover; background-repeat: no-repeat;
+}
+#portfolio .work ul li:nth-child(3){
+  background-image: url(../img/umf.jpg); background-position: center -160px;
+  background-size: cover; background-repeat: no-repeat;
+}
+#portfolio .work ul li:nth-child(4){
+  filter: initial;
+  background-image: url(../img/design-bg.jpg); background-position: center;
+  background-size: cover; background-repeat: no-repeat;
+}
+#portfolio .work ul li a{
+  display: inline-block; width: 100%; height: 100%;
+}
+#portfolio .work ul li a img{
+  width: 100px; position: absolute;
+  top: 50%; left: 50%; transition: 0.5s;
+  transform: translate(-50%, -50%);
+}
+#portfolio .work ul li a img:hover{
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+
+/* popup */
+#portfolio .popup{
+  position: fixed; z-index: 1; display: none; transition: 0.5s;
+  border: 2px solid #202020; box-sizing: border-box;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 50%; height: 90%; background: #fff; overflow: hidden;
+}
+#portfolio .popup .popup-title{
+  width: 100%; height: 50px; border-bottom: 2px solid #202020;
+  box-sizing: border-box; position: relative; font-size: 1.5em;
+}
+#portfolio .popup .popup-title span{
+  position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
+}
+#portfolio .popup .popup-title button{
+  cursor: pointer;
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+}
+#portfolio .popup .popup-title button i{font-size: 2.5em; color: #202020;}
+#portfolio .popup .popup-title button i:hover{color: #f39f16;}
+#portfolio .popup .popup-title ul{position: absolute; text-align: center; top: 50%; left:50%; transform: translate(-50%, -50%);}
+#portfolio .popup .popup-title ul li{float: left; width: 30px; height: 30px; background: #202020; margin: 0 5px;}
+#portfolio .popup .popup-title ul li a{color: #fff; line-height: 30px;}
+#portfolio .popup .popup-title ul li a:hover{color: #f39f16;}
+#portfolio .popup .popup-title .popup-contents{}
+#portfolio .popup-contents .img-box{text-align: center; padding: 15px 0; box-sizing: border-box !important;}
+#portfolio .popup-contents .img-box img{}
+
+
+
+/* 스크롤바
+.popup .swiper-container .swiper-wrapper ::-webkit-scrollbar {
+    width: 10px; margin-right: 10px;
+    background: #202020;
+    border-radius: 10px;
+}
+Track
+.popup .swiper-container .swiper-wrapper ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #202020;
+    border-radius: 10px;
+}
+Handle
+.popup .swiper-container .swiper-wrapper ::-webkit-scrollbar-thumb {
+    background: #f39f16;
+    border-radius: 10px;
+}
+Handle on hover
+.popup .swiper-container .swiper-wrapper ::-webkit-scrollbar-thumb:hover {
+    background: #f39f16;
+} */
+@keyframes color {
+  0%{filter: grayscale:(100%);}
+  100%{filter: grayscale:(0%);}
+}
+@keyframes move {
+  0%{transform: translateY(-50%);}
+  50%{transform: translateY(-80%);}
+  100%{transform: translateY(-100%);}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
